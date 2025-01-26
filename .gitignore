@@ -1,0 +1,44 @@
+# CLion-specific files
+.idea/
+
+# CMake build directory
+cmake-build-*/
+
+# User-specific files
+*.user
+*.user.*.user
+
+# OS-specific files
+.DS_Store       # macOS
+Thumbs.db       # Windows
+
+# Compiled object files
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+
+# Executables
+*.out
+*.app
+
+# Archive files
+*.tar.gz
+*.tgz
+*.zip
+*.rar
+*.7z
+
+# Backup files
+*~
+*.swp
+*.bak
+
+# C++ generated files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+CTestTestfile.cmake

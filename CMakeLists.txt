@@ -7,7 +7,9 @@ set(CMAKE_CXX_STANDARD 17)
 # Create the main executable for your project
 add_executable(InventoryManagementSystem src/main.cpp
         src/Product/Product.h
-        src/Product/Product.cpp)
+        src/Product/Product.cpp
+        src/ProductNode/ProductNode.cpp
+        src/ProductNode/ProductNode.h)
 
 # Add GoogleTest as a subdirectory (assumes GoogleTest is in the external/googletest folder)
 add_subdirectory(external/googletest)
@@ -19,7 +21,9 @@ enable_testing()
 file(GLOB TEST_SOURCES tests/*.cpp)
 
 # Create a test executable that includes all the test files in the tests folder
-add_executable(all_tests ${TEST_SOURCES} src/Product/Product.cpp)
+add_executable(all_tests ${TEST_SOURCES} src/Product/Product.cpp
+        src/ProductNode/ProductNode.cpp
+        src/ProductNode/ProductNode.h)
 
 # Link GoogleTest with the test executable
 target_link_libraries(all_tests gtest gtest_main)

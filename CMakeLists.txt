@@ -13,3 +13,8 @@ add_custom_target(doc
         COMMENT "Generating API documentation with Doxygen"
 )
 
+# Add GoogleTest as a subdirectory
+add_subdirectory(external/googletest)
+
+# Link GoogleTest with your executable
+target_link_libraries(InventoryManagementSystem gtest gtest_main)

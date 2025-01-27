@@ -54,15 +54,15 @@ void Product::setID(const int newID) {
     id = newID;
 }
 
-void Product::setName(const std::string &newName) {
+void Product::setName(const std::string& newName) {
     name = newName;
 }
 
-void Product::setCategory(const std::string &newCategory) {
+void Product::setCategory(const std::string& newCategory) {
     category = newCategory;
 }
 
-void Product::setLocation(const std::string &newLocation) {
+void Product::setLocation(const std::string& newLocation) {
     location = newLocation;
 }
 

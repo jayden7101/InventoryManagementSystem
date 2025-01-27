@@ -5,13 +5,14 @@
 /// @file    Product.h
 /// @author Jayden Ferreira
 ////////////////////////////////////////////////////////////////////////////////
-#pragma once
+#ifndef INVENTORY_MANAGEMENT_SOFTWARE_SRC_PRODUCT_H_
+#define INVENTORY_MANAGEMENT_SOFTWARE_SRC_PRODUCT_H_
 
 #include <string>
 
 class Product {
 private:    ///////////////////// Attributes ///////////////////////////////////
-    int         id;        // Product's specific id number
+    int         id;        // Product's unique id number
     std::string name;      // Name that describes the product
     std::string category;  // Product category
     std::string location;  // Product location
@@ -84,3 +85,5 @@ public:    /////////////////////// Getters /////////////////////////////////////
     /// @param newQuantity the new quantity for the product
     void setQuantity(const int newQuantity);
 }; // End of Product Class
+
+#endif //INVENTORY_MANAGEMENT_SOFTWARE_SRC_PRODUCT_H_

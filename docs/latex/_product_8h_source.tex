@@ -1,0 +1,55 @@
+\doxysection{Product.\+h}
+\hypertarget{_product_8h_source}{}\label{_product_8h_source}\index{src/Product/Product.h@{src/Product/Product.h}}
+\mbox{\hyperlink{_product_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Inventory\ Management\ Software}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_product_a145a5543ece839f7550a9b4cece8753a}{Product}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:\ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ id;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Product's\ specific\ id\ number}}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ name;\ \ \ \ \ \ \textcolor{comment}{//\ Name\ that\ describes\ the\ product}}
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ category;\ \ \textcolor{comment}{//\ Product\ category}}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ location;\ \ \textcolor{comment}{//\ Product\ location}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ price;\ \ \ \ \ \textcolor{comment}{//\ Product\ price}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ quantity;\ \ \textcolor{comment}{//\ Quantity\ of\ product\ currently\ in\ stock}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:\ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_product_a145a5543ece839f7550a9b4cece8753a}{Product}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ category,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ location,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ price,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ quantity}
+\DoxyCodeLine{00035\ \ \ \ \ );}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:\ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_product_adcd05ec0d871584e8fae034cb5b7e2a8}{getID}}()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_product_ab9e86d52d4f1b0b4c27531e2d75a99fe}{getName}}()\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_product_ab2d211628619eb624c78cc50bd0a0747}{getCategory}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_product_a9db1f247d33871d8ae6f83992c0695c8}{getLocation}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_product_a52abd6cf9d8e4c745f83bbfd9cb321ac}{getPrice}}()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ noexcept;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_product_a4a83d4a873529a23965fcd8cdcc35cb9}{getQuantity}}()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ noexcept;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_product_a820f7a7e25cf6cb32475904e89a53ded}{setID}}(const\ \textcolor{keywordtype}{int}\ newID);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_product_afe8f663af9b61fd0a56d4b6295f92a9b}{setName}}(const\ std::\textcolor{keywordtype}{string}\&\ newName);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_product_a53b9103ac7e872e0a9db35b7f75292a4}{setCategory}}(const\ std::\textcolor{keywordtype}{string}\&\ newCategory);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_product_a8b790ed893c171ff2e3882a5b66d574d}{setLocation}}(const\ std::\textcolor{keywordtype}{string}\&\ newLocation);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_product_a10b5425fcedb4f8fc7e800f3e8fabcc1}{setPrice}}(const\ \textcolor{keywordtype}{double}\ newPrice);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_product_a099f45204d8ce1d2957e44c7d91bd37e}{setQuantity}}(const\ \textcolor{keywordtype}{int}\ newQuantity);}
+\DoxyCodeLine{00086\ \};\ \textcolor{comment}{//\ End\ of\ Product\ Class}}
+
+\end{DoxyCode}

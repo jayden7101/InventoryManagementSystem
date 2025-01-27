@@ -8,7 +8,7 @@ add_executable(InventoryManagementSystem src/main.cpp
         src/Product/Product.cpp)
 
 add_custom_target(doc
-        COMMAND doxygen ${CMAKE_CURRENT_SOURCE_DIR}/Dotfile
+        COMMAND doxygen ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         COMMENT "Generating API documentation with Doxygen"
 )

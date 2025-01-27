@@ -15,8 +15,15 @@ Product::Product(const int          id,
                  const std::string& location,
                  const double       price,
                  const int          quantity)
+        : id(id), name(name), category(category), location(location),
+          price(price), quantity(quantity)
 {
-    /// @todo add constructor code
+    if (price < 0) {
+        throw std::invalid_argument("Price cannot be negative");
+    }
+    if (quantity < 0) {
+        throw std::invalid_argument("Quantity cannot be negative");
+    }
 }
 
 int Product::getID() const noexcept{
@@ -33,4 +40,42 @@ const string& Product::getCategory() const noexcept {
 
 const string& Product::getLocation() const noexcept {
     return location;
+}
+
+double Product::getPrice() const noexcept {
+    return price;
+}
+
+int Product::getQuantity() const noexcept{
+    return quantity;
+}
+
+void Product::setID(const int newID) {
+    id = newID;
+}
+
+void Product::setName(const std::string &newName) {
+    name = newName;
+}
+
+void Product::setCategory(const std::string &newCategory) {
+    category = newCategory;
+}
+
+void Product::setLocation(const std::string &newLocation) {
+    location = newLocation;
+}
+
+void  Product::setPrice(const double newPrice) {
+    if (newPrice < 0) {
+        throw std::invalid_argument("Price cannot be negative.");
+    }
+    price = newPrice;
+}
+
+void Product::setQuantity(const int newQuantity) {
+    if (newQuantity < 0) {
+        throw std::invalid_argument("Quantity cannot be negative.");
+    }
+    quantity = newQuantity;
 }

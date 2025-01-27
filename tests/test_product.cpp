@@ -38,12 +38,12 @@ TEST_F(ProductTest, ConstructorValidInputs) {
 }
 
 // Test constructor with invalid price
-TEST(ProductTest, ConstructorInvalidPrice) {
+TEST_F(ProductTest, ConstructorInvalidPrice) {
     EXPECT_THROW(Product(1, "Laptop", "Electronics", "Aisle 3", -100.0, 10), std::invalid_argument);
 }
 
 // Test constructor with invalid quantity
-TEST(ProductTest, ConstructorInvalidQuantity) {
+TEST_F(ProductTest, ConstructorInvalidQuantity) {
     EXPECT_THROW(Product(1, "Laptop", "Electronics", "Aisle 3", 999.99, -10), std::invalid_argument);
 }
 

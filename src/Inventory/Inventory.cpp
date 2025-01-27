@@ -1,0 +1,9 @@
+////////////////////////////////////////////////////////////////////////////////
+//                       Inventory Management Software
+/// Inventory Class - manages a doubly linked list of Product nodes to
+/// represent the inventory.
+///
+/// @file    Inventory.cpp
+/// @author Jayden Ferreira <jayden71@hawaii.edu>
+////////////////////////////////////////////////////////////////////////////////
+#include "Inventory.h"

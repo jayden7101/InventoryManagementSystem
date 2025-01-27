@@ -5,7 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(InventoryManagementSystem src/main.cpp
         src/Product/Product.h
-        src/Product/Product.cpp)
+        src/Product/Product.cpp
+        tests/test_product.cpp)
 
 add_custom_target(doc
         COMMAND doxygen ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile
@@ -18,3 +19,9 @@ add_subdirectory(external/googletest)
 
 # Link GoogleTest with your executable
 target_link_libraries(InventoryManagementSystem gtest gtest_main)
+
+# Enable testing
+enable_testing()
+
+# Add a test
+add_test(NAME ProductTest COMMAND test_product)

@@ -1,17 +1,18 @@
 cmake_minimum_required(VERSION 3.0)
-project(InventoryManagementSystem)
+project(InventoryManagementSoftware)
 
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)
 
 # Create the main executable for your project
-add_executable(InventoryManagementSystem src/main.cpp
+add_executable(InventoryManagementSoftware
         src/Product/Product.h
         src/Product/Product.cpp
         src/ProductNode/ProductNode.cpp
         src/ProductNode/ProductNode.h
         src/Inventory/Inventory.cpp
-        src/Inventory/Inventory.h)
+        src/Inventory/Inventory.h
+        "src/CLI Inventory Driver/InventoryDriver.cpp")
 
 # Add GoogleTest as a subdirectory (assumes GoogleTest is in the external/googletest folder)
 add_subdirectory(external/googletest)
@@ -28,7 +29,8 @@ add_executable(all_tests ${TEST_SOURCES} src/Product/Product.cpp
         src/ProductNode/ProductNode.h
         src/Inventory/Inventory.cpp
         src/Inventory/Inventory.h
-        tests/test_product_node.cpp)
+        tests/test_product_node.cpp
+        "src/CLI Inventory Driver/InventoryDriver.cpp")
 
 # Link GoogleTest with the test executable
 target_link_libraries(all_tests gtest gtest_main)

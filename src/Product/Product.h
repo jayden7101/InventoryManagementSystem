@@ -9,6 +9,7 @@
 #define INVENTORY_MANAGEMENT_SOFTWARE_SRC_PRODUCT_H_
 
 #include <string>
+#include <sstream>
 
 class Product {
 private:    ///////////////////// Attributes ///////////////////////////////////
@@ -84,6 +85,10 @@ public:    /////////////////////// Getters /////////////////////////////////////
     /// Set the Product Quantity
     /// @param newQuantity the new quantity for the product
     void setQuantity(const int newQuantity);
+
+    /////////////////////////// Public Methods /////////////////////////////////
+    /// Represent a product object as a string
+    std::string productToString() const;
 }; // End of Product Class
 
 #endif //INVENTORY_MANAGEMENT_SOFTWARE_SRC_PRODUCT_H_

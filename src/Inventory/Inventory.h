@@ -9,6 +9,7 @@
 #ifndef INVENTORY_MANAGEMENT_SOFTWARE__INVENTORY_H_
 #define INVENTORY_MANAGEMENT_SOFTWARE__INVENTORY_H_
 
+#include <iostream>
 #include "../ProductNode/ProductNode.h"
 
 class Inventory {
@@ -23,43 +24,16 @@ public:    //////////////// Constructor & Destructor ///////////////////////////
     /// Destructor to clean up dynamically allocated memory
     ~Inventory();
 
-///////////////////////////// Utility Functions ////////////////////////////////
+///////////////////////////// Public Methods ////////////////////////////////
     /// Add a Product Node
-    /// @param id
-    /// @param name
-    /// @param category
-    /// @param location
-    /// @param price
-    /// @param quantity
+    /// @param product
     void addProduct( const Product& product );
 
     /// Remove a Product Node
     /// @param productID
     void removeProduct( int productID );
 
-    /// Update the details of a product
-    /// @param productId
-    /// @param newQuantity
-    /// @param newPrice
-    void updateProduct(int productId, int newQuantity, double newPrice);
-
-    /// Get a product by its ID
-    /// @param productId
-    ProductNode* getProduct(int productId);
-
-    /// List all products in the inventory
-    void listAllProducts();
-
-    /// Count the total number of products in the inventory
-    int countProducts();
-
-    /// Clear all products in the inventory
-    void clear();
-
-    /// Search for a product by name
-    ProductNode* searchByName(const std::string& name);
-
-    /// Sort the products by price (ascending order)
-    void sortByPrice();
+    /// Print entire inventory
+    void printInventory( ) const;
 }; /// End of Inventory Class
 #endif //INVENTORY_MANAGEMENT_SOFTWARE__INVENTORY_H_

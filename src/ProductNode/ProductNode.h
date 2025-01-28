@@ -8,6 +8,7 @@
 #ifndef INVENTORY_MANAGEMENT_SOFTWARE_PRODUCTNODE_H_
 #define INVENTORY_MANAGEMENT_SOFTWARE_PRODUCTNODE_H_
 
+#include <iostream>
 #include "../Product/Product.h"
 
 class ProductNode {
@@ -48,6 +49,10 @@ public:    /////////////////////// Getters /////////////////////////////////////
     /// Set the previous product node
     /// @param prevNode
     void setPrevNode(ProductNode* prevNode);
+
+    /////////////////////////// Public Methods /////////////////////////////////
+    /// Print a product node
+    void printProductNode() const;
 }; // End of ProductNode class
 
 #endif //INVENTORY_MANAGEMENT_SOFTWARE_PRODUCTNODE_H_

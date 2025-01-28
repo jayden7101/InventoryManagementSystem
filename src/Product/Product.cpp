@@ -79,3 +79,14 @@ void Product::setQuantity(const int newQuantity) {
     }
     quantity = newQuantity;
 }
+
+string Product::productToString() const {
+    stringstream product_string;
+    product_string << "Product ID: "  << id       << "\n"
+                   << "      Name: "  << name     << "\n"
+                   << "  Category: "  << category << "\n"
+                   << "  Location: "  << location << "\n"
+                   << "     Price: $" << price    << "\n"
+                   << "  Quantity: "  << quantity << "\n";
+    return product_string.str();
+}

@@ -7,6 +7,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 #include "ProductNode.h"
 
+using namespace std;
+
 ProductNode::ProductNode( Product      product,
                           ProductNode* next,
                           ProductNode* prev)
@@ -38,4 +40,8 @@ void ProductNode::setNextNode(ProductNode* nextNode) {
 
 void ProductNode::setPrevNode(ProductNode* prevNode) {
     prev = prevNode;
+}
+
+void ProductNode::printProductNode() const {
+    cout << product.productToString() << endl;
 }

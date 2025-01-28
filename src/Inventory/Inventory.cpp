@@ -6,8 +6,9 @@
 /// @file    Inventory.cpp
 /// @author Jayden Ferreira <jayden71@hawaii.edu>
 ////////////////////////////////////////////////////////////////////////////////
-#include <iostream>
 #include "Inventory.h"
+
+using namespace std;
 
 Inventory::Inventory() : head(nullptr), tail(nullptr){ }
 
@@ -65,7 +66,7 @@ void Inventory::removeProduct(int productID) {
 
             // Delete the node and break out of the loop
             delete current;
-            std::cout << "Product with ID " << productID << " removed successfully.\n";
+            cout << "Product with ID " << productID << " removed successfully.\n";
             return;
         }
 
@@ -74,5 +75,19 @@ void Inventory::removeProduct(int productID) {
     }
 
     // If no product with the given ID is found
-    std::cout << "Product with ID " << productID << " not found.\n";
+    cout << "Product with ID " << productID << " not found.\n";
+}
+
+void Inventory::printInventory() const {
+    if (head == nullptr) {
+        cout << "Inventory is empty.\n";
+        return;
+    }
+
+    ProductNode* current = head;
+    while (current != nullptr) {
+        current->printProductNode();  // This uses the printProductNode method of ProductNode
+        cout << "---------------------------\n"; // Optional separator between products
+        current = current->getNext();
+    }
 }

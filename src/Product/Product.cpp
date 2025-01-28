@@ -9,14 +9,14 @@
 
 using namespace std;
 
-Product::Product(const int          id,
-                 const std::string& name,
-                 const std::string& category,
-                 const std::string& location,
-                 const double       price,
-                 const int          quantity)
+Product::Product(const int     id,
+                 const string& name,
+                 const string& category,
+                 const string& location,
+                 const double  price,
+                 const int     quantity)
         : id(id), name(name), category(category), location(location),
-          price(price), quantity(quantity)
+           price(price), quantity(quantity)
 {
     if (price < 0) {
         throw std::invalid_argument("Price cannot be negative");
